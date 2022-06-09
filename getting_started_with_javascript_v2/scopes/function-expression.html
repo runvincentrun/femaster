@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function itself is a value, can be passed or returned. 
+        // Function is a first class citizen, can be passed around.
+        var clickHandler = function () {}
+
+        var keyHandler = function keyHandler() {
+
+        }
+        var people = [{
+            id: 1
+        }, {
+            id: 2
+        }]
+        var ids = people.map(person => person.id);
+        console.log(ids)
+    </script>
+</body>
+
+</html>

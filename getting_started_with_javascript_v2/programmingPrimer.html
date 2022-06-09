@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var favoriteBooks = [];
+        addFavoriteBook("A Song of Ice and Fire")
+        addFavoriteBook("The Great Gastby")
+        addFavoriteBook("Crime & Punishment")
+        addFavoriteBook("Great Expectations")
+        addFavoriteBook("You Don't know JS")
+
+        function addFavoriteBook(bookTitle) {
+            if (!bookTitle.includes("Great")) {
+                favoriteBooks.push(bookTitle)
+            }
+
+        }
+
+        function printFavoriteBooks() {
+            for (let book of favoriteBooks) {
+                console.log(book)
+            }
+        }
+        printFavoriteBooks()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Workshop(teacher) {
+            this.teacher = teacher;
+        }
+
+        Workshop.prototype.ask = function (question) {
+            console.log(this.teacher, question)
+        }
+
+        var deepJS = new Workshop("Kyle")
+        var reactJS = new Workshop("Suzy")
+
+        deepJS.ask("Is 'prototype' a class?")
+        reactJS.ask("Isn't 'prototype' ugly?")
+
+        console.log(Workshop);
+        console.dir(Workshop)
+    </script>
+</body>
+
+</html>

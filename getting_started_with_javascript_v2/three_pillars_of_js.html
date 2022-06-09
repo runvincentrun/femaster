@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Bookshelf {
+            constructor() {
+                this.favoriteBooks = [];
+            }
+            addFavoriteBook(bookName) {
+                if (!bookName.includes("Great")) {
+                    this.favoriteBooks.push(bookName);
+                }
+            }
+
+            printFavoriteBooks() {
+                console.log(`Favorite Books: ${String(this.favoriteBooks.length)}`)
+                for (let bookName of this.favoriteBooks) {
+                    console.log(bookName)
+                }
+            }
+        }
+
+
+
+        function loadBooks(BookshelfInstance) {
+            // Fake call.
+            fakeAjax(BOOK_API, function (arrayOfBookNames) {
+                for (let book of arrayOfBookNames) {
+                    BookshelfInstance.addFavoriteBook(book)
+                }
+                BookshelfInstance.printFavoriteBooks();
+            });
+
+        }
+
+        var BOOK_API = "https://some.url/api";
+
+        function fakeAjax(url, cb) {
+            setTimeout(() => {
+                cb([
+                    "A Song of Ice and Fire",
+                    "The Great Gastby",
+                    "Crime & Punishment",
+                    "Great Expectations",
+                    "You Don't know JS",
+                ]);
+            }, 1000);
+
+        }
+
+        var myBooks = new Bookshelf();
+        loadBooks(myBooks)
+        console.log(myBooks)
+    </script>
+</body>
+
+</html>

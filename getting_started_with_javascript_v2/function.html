@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // student here is called parameter
+        function greetStudent(student) {
+            // procedure -> Not giving things back.
+            console.log(`Hello, ${student.name}`)
+        }
+
+        function timeRemaining(timeElapsed, endTime) {
+            return endTime - timeElapsed;
+        }
+
+        var left = timeRemaining(42, 240) // 198 
+    </script>
+</body>
+
+</html>
