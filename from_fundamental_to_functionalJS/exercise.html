@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var game = {};
+        game.murderer = "??";
+        game["weapons"] = [{
+                type: 'lasers',
+                location: 'lab'
+            },
+            {
+                type: 'angry cats',
+                location: garden
+            },
+            {
+                type: 'dish soap',
+            }
+        ];
+
+        game.name = [];
+        game.name.push("Miss Scarlet")
+
+        console.log(game["weapons"][0])
+    </script>
+</body>
+
+</html>
